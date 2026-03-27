@@ -1,0 +1,9 @@
+# Phase 2 Requirements - Minimal dependencies for in-memory backend
+# This is a simplified requirements file for Phase 2 only
+
+fastapi==0.110.1
+uvicorn[standard]==0.25.0
+pydantic>=2.6.4
+
+# Optional: for better JSON serialization
+python-dateutil>=2.8.2

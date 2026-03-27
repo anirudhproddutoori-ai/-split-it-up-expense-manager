@@ -1,0 +1,578 @@
+﻿{
+    "timestamp":  "2026-01-15T16:23:16.776403",
+    "test_cases":  {
+                       "A":  {
+                                 "name":  "2-member equal split",
+                                 "passed":  true,
+                                 "expenses":  [
+                                                  {
+                                                      "amount":  500.0,
+                                                      "paid_by":  "A",
+                                                      "split":  "equal among [A,B]"
+                                                  }
+                                              ],
+                                 "balances":  {
+                                                  "expected":  {
+                                                                   "A":  250.0,
+                                                                   "B":  -250.0
+                                                               },
+                                                  "actual":  {
+                                                                 "A":  250.0,
+                                                                 "B":  -250.0
+                                                             },
+                                                  "details":  {
+                                                                  "B":  {
+                                                                            "expected":  -250.0,
+                                                                            "actual":  -250.0,
+                                                                            "diff":  0.0,
+                                                                            "match":  true
+                                                                        },
+                                                                  "A":  {
+                                                                            "expected":  250.0,
+                                                                            "actual":  250.0,
+                                                                            "diff":  0.0,
+                                                                            "match":  true
+                                                                        }
+                                                              },
+                                                  "passed":  true
+                                              },
+                                 "settlements":  {
+                                                     "expected":  [
+                                                                      {
+                                                                          "from":  "B",
+                                                                          "to":  "A",
+                                                                          "amount":  250.0
+                                                                      }
+                                                                  ],
+                                                     "actual":  [
+                                                                    {
+                                                                        "from":  "B",
+                                                                        "to":  "A",
+                                                                        "amount":  250.0
+                                                                    }
+                                                                ],
+                                                     "details":  {
+                                                                     "settlements":  [
+                                                                                         {
+                                                                                             "index":  0,
+                                                                                             "expected":  {
+                                                                                                              "from":  "B",
+                                                                                                              "to":  "A",
+                                                                                                              "amount":  250.0
+                                                                                                          },
+                                                                                             "actual":  {
+                                                                                                            "from":  "B",
+                                                                                                            "to":  "A",
+                                                                                                            "amount":  250.0
+                                                                                                        },
+                                                                                             "match":  true
+                                                                                         }
+                                                                                     ]
+                                                                 },
+                                                     "passed":  true
+                                                 }
+                             },
+                       "B":  {
+                                 "name":  "3-member, subset split",
+                                 "passed":  true,
+                                 "expenses":  [
+                                                  {
+                                                      "amount":  500.0,
+                                                      "paid_by":  "A",
+                                                      "split":  "equal among [A,B]"
+                                                  }
+                                              ],
+                                 "balances":  {
+                                                  "expected":  {
+                                                                   "A":  250.0,
+                                                                   "B":  -250.0,
+                                                                   "C":  0.0
+                                                               },
+                                                  "actual":  {
+                                                                 "A":  250.0,
+                                                                 "B":  -250.0,
+                                                                 "C":  0.0
+                                                             },
+                                                  "details":  {
+                                                                  "C":  {
+                                                                            "expected":  0.0,
+                                                                            "actual":  0.0,
+                                                                            "diff":  0.0,
+                                                                            "match":  true
+                                                                        },
+                                                                  "B":  {
+                                                                            "expected":  -250.0,
+                                                                            "actual":  -250.0,
+                                                                            "diff":  0.0,
+                                                                            "match":  true
+                                                                        },
+                                                                  "A":  {
+                                                                            "expected":  250.0,
+                                                                            "actual":  250.0,
+                                                                            "diff":  0.0,
+                                                                            "match":  true
+                                                                        }
+                                                              },
+                                                  "passed":  true
+                                              },
+                                 "settlements":  {
+                                                     "expected":  [
+                                                                      {
+                                                                          "from":  "B",
+                                                                          "to":  "A",
+                                                                          "amount":  250.0
+                                                                      }
+                                                                  ],
+                                                     "actual":  [
+                                                                    {
+                                                                        "from":  "B",
+                                                                        "to":  "A",
+                                                                        "amount":  250.0
+                                                                    }
+                                                                ],
+                                                     "details":  {
+                                                                     "settlements":  [
+                                                                                         {
+                                                                                             "index":  0,
+                                                                                             "expected":  {
+                                                                                                              "from":  "B",
+                                                                                                              "to":  "A",
+                                                                                                              "amount":  250.0
+                                                                                                          },
+                                                                                             "actual":  {
+                                                                                                            "from":  "B",
+                                                                                                            "to":  "A",
+                                                                                                            "amount":  250.0
+                                                                                                        },
+                                                                                             "match":  true
+                                                                                         }
+                                                                                     ]
+                                                                 },
+                                                     "passed":  true
+                                                 }
+                             },
+                       "C":  {
+                                 "name":  "Equal among 3",
+                                 "passed":  true,
+                                 "expenses":  [
+                                                  {
+                                                      "amount":  300.0,
+                                                      "paid_by":  "B",
+                                                      "split":  "equal among [A,B,C]"
+                                                  }
+                                              ],
+                                 "balances":  {
+                                                  "expected":  {
+                                                                   "A":  -100.0,
+                                                                   "B":  200.0,
+                                                                   "C":  -100.0
+                                                               },
+                                                  "actual":  {
+                                                                 "A":  -100.0,
+                                                                 "B":  200.0,
+                                                                 "C":  -100.0
+                                                             },
+                                                  "details":  {
+                                                                  "C":  {
+                                                                            "expected":  -100.0,
+                                                                            "actual":  -100.0,
+                                                                            "diff":  0.0,
+                                                                            "match":  true
+                                                                        },
+                                                                  "B":  {
+                                                                            "expected":  200.0,
+                                                                            "actual":  200.0,
+                                                                            "diff":  0.0,
+                                                                            "match":  true
+                                                                        },
+                                                                  "A":  {
+                                                                            "expected":  -100.0,
+                                                                            "actual":  -100.0,
+                                                                            "diff":  0.0,
+                                                                            "match":  true
+                                                                        }
+                                                              },
+                                                  "passed":  true
+                                              },
+                                 "settlements":  {
+                                                     "expected":  [
+                                                                      {
+                                                                          "from":  "A",
+                                                                          "to":  "B",
+                                                                          "amount":  100.0
+                                                                      },
+                                                                      {
+                                                                          "from":  "C",
+                                                                          "to":  "B",
+                                                                          "amount":  100.0
+                                                                      }
+                                                                  ],
+                                                     "actual":  [
+                                                                    {
+                                                                        "from":  "A",
+                                                                        "to":  "B",
+                                                                        "amount":  100.0
+                                                                    },
+                                                                    {
+                                                                        "from":  "C",
+                                                                        "to":  "B",
+                                                                        "amount":  100.0
+                                                                    }
+                                                                ],
+                                                     "details":  {
+                                                                     "settlements":  [
+                                                                                         {
+                                                                                             "index":  0,
+                                                                                             "expected":  {
+                                                                                                              "from":  "A",
+                                                                                                              "to":  "B",
+                                                                                                              "amount":  100.0
+                                                                                                          },
+                                                                                             "actual":  {
+                                                                                                            "from":  "A",
+                                                                                                            "to":  "B",
+                                                                                                            "amount":  100.0
+                                                                                                        },
+                                                                                             "match":  true
+                                                                                         },
+                                                                                         {
+                                                                                             "index":  1,
+                                                                                             "expected":  {
+                                                                                                              "from":  "C",
+                                                                                                              "to":  "B",
+                                                                                                              "amount":  100.0
+                                                                                                          },
+                                                                                             "actual":  {
+                                                                                                            "from":  "C",
+                                                                                                            "to":  "B",
+                                                                                                            "amount":  100.0
+                                                                                                        },
+                                                                                             "match":  true
+                                                                                         }
+                                                                                     ]
+                                                                 },
+                                                     "passed":  true
+                                                 }
+                             },
+                       "D":  {
+                                 "name":  "Exact amounts",
+                                 "passed":  true,
+                                 "expenses":  [
+                                                  {
+                                                      "amount":  370.0,
+                                                      "paid_by":  "C",
+                                                      "split":  "exact: A=100, B=120, C=150"
+                                                  }
+                                              ],
+                                 "balances":  {
+                                                  "expected":  {
+                                                                   "A":  -100.0,
+                                                                   "B":  -120.0,
+                                                                   "C":  220.0
+                                                               },
+                                                  "actual":  {
+                                                                 "A":  -100.0,
+                                                                 "B":  -120.0,
+                                                                 "C":  220.0
+                                                             },
+                                                  "details":  {
+                                                                  "C":  {
+                                                                            "expected":  220.0,
+                                                                            "actual":  220.0,
+                                                                            "diff":  0.0,
+                                                                            "match":  true
+                                                                        },
+                                                                  "B":  {
+                                                                            "expected":  -120.0,
+                                                                            "actual":  -120.0,
+                                                                            "diff":  0.0,
+                                                                            "match":  true
+                                                                        },
+                                                                  "A":  {
+                                                                            "expected":  -100.0,
+                                                                            "actual":  -100.0,
+                                                                            "diff":  0.0,
+                                                                            "match":  true
+                                                                        }
+                                                              },
+                                                  "passed":  true
+                                              },
+                                 "settlements":  {
+                                                     "expected":  [
+                                                                      {
+                                                                          "from":  "B",
+                                                                          "to":  "C",
+                                                                          "amount":  120.0
+                                                                      },
+                                                                      {
+                                                                          "from":  "A",
+                                                                          "to":  "C",
+                                                                          "amount":  100.0
+                                                                      }
+                                                                  ],
+                                                     "actual":  [
+                                                                    {
+                                                                        "from":  "B",
+                                                                        "to":  "C",
+                                                                        "amount":  120.0
+                                                                    },
+                                                                    {
+                                                                        "from":  "A",
+                                                                        "to":  "C",
+                                                                        "amount":  100.0
+                                                                    }
+                                                                ],
+                                                     "details":  {
+                                                                     "settlements":  [
+                                                                                         {
+                                                                                             "index":  0,
+                                                                                             "expected":  {
+                                                                                                              "from":  "A",
+                                                                                                              "to":  "C",
+                                                                                                              "amount":  100.0
+                                                                                                          },
+                                                                                             "actual":  {
+                                                                                                            "from":  "A",
+                                                                                                            "to":  "C",
+                                                                                                            "amount":  100.0
+                                                                                                        },
+                                                                                             "match":  true
+                                                                                         },
+                                                                                         {
+                                                                                             "index":  1,
+                                                                                             "expected":  {
+                                                                                                              "from":  "B",
+                                                                                                              "to":  "C",
+                                                                                                              "amount":  120.0
+                                                                                                          },
+                                                                                             "actual":  {
+                                                                                                            "from":  "B",
+                                                                                                            "to":  "C",
+                                                                                                            "amount":  120.0
+                                                                                                        },
+                                                                                             "match":  true
+                                                                                         }
+                                                                                     ]
+                                                                 },
+                                                     "passed":  true
+                                                 }
+                             },
+                       "E":  {
+                                 "name":  "Percentage",
+                                 "passed":  true,
+                                 "expenses":  [
+                                                  {
+                                                      "amount":  1000.0,
+                                                      "paid_by":  "A",
+                                                      "split":  "percent: A=50%, B=30%, C=20%"
+                                                  }
+                                              ],
+                                 "balances":  {
+                                                  "expected":  {
+                                                                   "A":  500.0,
+                                                                   "B":  -300.0,
+                                                                   "C":  -200.0
+                                                               },
+                                                  "actual":  {
+                                                                 "A":  500.0,
+                                                                 "B":  -300.0,
+                                                                 "C":  -200.0
+                                                             },
+                                                  "details":  {
+                                                                  "C":  {
+                                                                            "expected":  -200.0,
+                                                                            "actual":  -200.0,
+                                                                            "diff":  0.0,
+                                                                            "match":  true
+                                                                        },
+                                                                  "B":  {
+                                                                            "expected":  -300.0,
+                                                                            "actual":  -300.0,
+                                                                            "diff":  0.0,
+                                                                            "match":  true
+                                                                        },
+                                                                  "A":  {
+                                                                            "expected":  500.0,
+                                                                            "actual":  500.0,
+                                                                            "diff":  0.0,
+                                                                            "match":  true
+                                                                        }
+                                                              },
+                                                  "passed":  true
+                                              },
+                                 "settlements":  {
+                                                     "expected":  [
+                                                                      {
+                                                                          "from":  "B",
+                                                                          "to":  "A",
+                                                                          "amount":  300.0
+                                                                      },
+                                                                      {
+                                                                          "from":  "C",
+                                                                          "to":  "A",
+                                                                          "amount":  200.0
+                                                                      }
+                                                                  ],
+                                                     "actual":  [
+                                                                    {
+                                                                        "from":  "B",
+                                                                        "to":  "A",
+                                                                        "amount":  300.0
+                                                                    },
+                                                                    {
+                                                                        "from":  "C",
+                                                                        "to":  "A",
+                                                                        "amount":  200.0
+                                                                    }
+                                                                ],
+                                                     "details":  {
+                                                                     "settlements":  [
+                                                                                         {
+                                                                                             "index":  0,
+                                                                                             "expected":  {
+                                                                                                              "from":  "B",
+                                                                                                              "to":  "A",
+                                                                                                              "amount":  300.0
+                                                                                                          },
+                                                                                             "actual":  {
+                                                                                                            "from":  "B",
+                                                                                                            "to":  "A",
+                                                                                                            "amount":  300.0
+                                                                                                        },
+                                                                                             "match":  true
+                                                                                         },
+                                                                                         {
+                                                                                             "index":  1,
+                                                                                             "expected":  {
+                                                                                                              "from":  "C",
+                                                                                                              "to":  "A",
+                                                                                                              "amount":  200.0
+                                                                                                          },
+                                                                                             "actual":  {
+                                                                                                            "from":  "C",
+                                                                                                            "to":  "A",
+                                                                                                            "amount":  200.0
+                                                                                                        },
+                                                                                             "match":  true
+                                                                                         }
+                                                                                     ]
+                                                                 },
+                                                     "passed":  true
+                                                 }
+                             },
+                       "F":  {
+                                 "name":  "Multi-expense netting",
+                                 "passed":  true,
+                                 "expenses":  [
+                                                  {
+                                                      "amount":  500.0,
+                                                      "paid_by":  "A",
+                                                      "split":  "equal among [A,B]"
+                                                  },
+                                                  {
+                                                      "amount":  300.0,
+                                                      "paid_by":  "B",
+                                                      "split":  "equal among [B,C]"
+                                                  }
+                                              ],
+                                 "balances":  {
+                                                  "expected":  {
+                                                                   "A":  250.0,
+                                                                   "B":  -100.0,
+                                                                   "C":  -150.0
+                                                               },
+                                                  "actual":  {
+                                                                 "A":  250.0,
+                                                                 "B":  -100.0,
+                                                                 "C":  -150.0
+                                                             },
+                                                  "details":  {
+                                                                  "C":  {
+                                                                            "expected":  -150.0,
+                                                                            "actual":  -150.0,
+                                                                            "diff":  0.0,
+                                                                            "match":  true
+                                                                        },
+                                                                  "B":  {
+                                                                            "expected":  -100.0,
+                                                                            "actual":  -100.0,
+                                                                            "diff":  0.0,
+                                                                            "match":  true
+                                                                        },
+                                                                  "A":  {
+                                                                            "expected":  250.0,
+                                                                            "actual":  250.0,
+                                                                            "diff":  0.0,
+                                                                            "match":  true
+                                                                        }
+                                                              },
+                                                  "passed":  true
+                                              },
+                                 "settlements":  {
+                                                     "expected":  [
+                                                                      {
+                                                                          "from":  "C",
+                                                                          "to":  "A",
+                                                                          "amount":  150.0
+                                                                      },
+                                                                      {
+                                                                          "from":  "B",
+                                                                          "to":  "A",
+                                                                          "amount":  100.0
+                                                                      }
+                                                                  ],
+                                                     "actual":  [
+                                                                    {
+                                                                        "from":  "C",
+                                                                        "to":  "A",
+                                                                        "amount":  150.0
+                                                                    },
+                                                                    {
+                                                                        "from":  "B",
+                                                                        "to":  "A",
+                                                                        "amount":  100.0
+                                                                    }
+                                                                ],
+                                                     "details":  {
+                                                                     "settlements":  [
+                                                                                         {
+                                                                                             "index":  0,
+                                                                                             "expected":  {
+                                                                                                              "from":  "B",
+                                                                                                              "to":  "A",
+                                                                                                              "amount":  100.0
+                                                                                                          },
+                                                                                             "actual":  {
+                                                                                                            "from":  "B",
+                                                                                                            "to":  "A",
+                                                                                                            "amount":  100.0
+                                                                                                        },
+                                                                                             "match":  true
+                                                                                         },
+                                                                                         {
+                                                                                             "index":  1,
+                                                                                             "expected":  {
+                                                                                                              "from":  "C",
+                                                                                                              "to":  "A",
+                                                                                                              "amount":  150.0
+                                                                                                          },
+                                                                                             "actual":  {
+                                                                                                            "from":  "C",
+                                                                                                            "to":  "A",
+                                                                                                            "amount":  150.0
+                                                                                                        },
+                                                                                             "match":  true
+                                                                                         }
+                                                                                     ]
+                                                                 },
+                                                     "passed":  true
+                                                 }
+                             }
+                   },
+    "summary":  {
+                    "total":  6,
+                    "passed":  6,
+                    "failed":  0,
+                    "all_passed":  true
+                }
+}
